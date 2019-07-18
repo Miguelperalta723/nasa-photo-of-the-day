@@ -1,11 +1,13 @@
-.modal-container {
+/* .modal-container {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
-}
+
+  
+} */
 
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -36,13 +38,14 @@
     transform: rotate(360deg);
   }
 }*/
-
+/* 
 .description-box {
   border-radius: 5px;
   border: 1px solid white;
   width: 960px;
   margin: 0 auto;
-}
+  background: transparent;
+} */
 
 
 html {

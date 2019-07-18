@@ -4,6 +4,15 @@ import DescriptionBox from './description'
 import styled from 'styled-components';
 
 
+const SpaceBox = styled.div`
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+`;
+
 const Button = styled.button`
   background: transparent;
   color: dodgerblue;
@@ -27,11 +36,11 @@ const Button = styled.button`
   }, []);
   
   return (
-    <div className="modal-container">
+    <SpaceBox>
       <Component imgProp={apod.url} titleProp={apod.title}/>
       <DescriptionBox dateProp={apod.date}  explanationProp={apod.explanation}/>
       <Button onClick={props.toggleDisplay}>not yooo</Button>
-    </div>
+    </SpaceBox>
 
   );
     // return (
