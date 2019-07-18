@@ -1,8 +1,15 @@
-.App {
+/* .modal-container {
   text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
 
-.App-logo {
+  
+} */
+
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
@@ -30,4 +37,31 @@
   to {
     transform: rotate(360deg);
   }
+}*/
+/* 
+.description-box {
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 960px;
+  margin: 0 auto;
+  background: transparent;
+} */
+
+
+html {
+  background-color: black;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./images/spaceboy.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  color: white;
 }
