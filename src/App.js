@@ -1,40 +1,30 @@
 import React, { useState , useEffect } from "react";
 import "./App.css";
+import ModalComponent from './modal';
+import styled from 'styled-components';
 
-import Component from './component'
-import DescriptionBox from './description'
+
+const Button = styled.button`
+  background: transparent;
+  color: dodgerblue;
+  border-style: none;
+  cursor: pointer;
+`;
 
 function App() {
-  const [apod, setApod] = useState('');
 
-  useEffect(() => {
+  const [display, setDisplay] = useState(false);
 
-    fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14')
+  const toggleDisplay = () => {
+    setDisplay(!display)
+  }
 
-    .then(res => res.json())
-
-    .then(res => {
-      console.log(res)
-      setApod(res)
-    })
-
-    .catch(res => {
-      console.log('error:', res)
-    })
-
-  }, []);
-  
   return (
-    <div className="App">
-
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      <Component imgProp={apod.url} titleProp={apod.title}/>
-      <DescriptionBox dateProp={apod.date}  explanationProp={apod.explanation}/>
+    <div className="container">
+      <Button onClick={toggleDisplay}>yooo</Button>
+      { display ? <ModalComponent toggleDisplay={toggleDisplay} /> : null}
     </div>
-  );
+  )
 }
 
 export default App;
